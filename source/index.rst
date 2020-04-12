@@ -10,7 +10,12 @@ Welcome to CIRIquant-cookbook's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   hello
+   home
+   installation
+   test
+   quantification
+   correction
+   de
 
 Indices and tables
 ==================

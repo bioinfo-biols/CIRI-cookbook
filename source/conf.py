@@ -39,6 +39,7 @@ release = '1.0.2'
 master_doc = 'index'
 extensions = [
     'recommonmark',
+    'sphinx_markdown_tables',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
