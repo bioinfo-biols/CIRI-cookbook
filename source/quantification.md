@@ -18,6 +18,8 @@ Options (defaults in parentheses):
   -e, --log         Specific log file (default: sample_prefix.log)
   -p, --prefix      Output sample prefix (default: input sample name)
   -t, --threads     Number of CPU threads to use (defualt: 4)
+  -a, --anchor      Minimum anchor length for junction alignment (default: 5)
+  -l, --libary-type Library type, 0: unstranded, 1: read1 match the sense strand, 2: read1 match the antisense strand (default: 0)
 
   --bed             User provided Back-Spliced Junction Site in BED format
   --circ            circRNA prediction results from other tools
