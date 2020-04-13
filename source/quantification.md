@@ -20,8 +20,8 @@ Options (defaults in parentheses):
   -t, --threads     Number of CPU threads to use (defualt: 4)
 
   --bed             User provided Back-Spliced Junction Site in BED format
-  --circ            User provided circRNA prediction results
-  --tool            User provided tool name for circRNA prediction (Only CIRI2 is supported)
+  --circ            circRNA prediction results from other tools
+  --tool            Tool name, required when --circ is specified ([CIRI2/CIRCexplorer2/DCC/KNIFE/MapSplice/UROBORUS/circRNA_finder/find_circ])
 
   --RNaseR          CIRIquant output file of RNase R data (required for RNase R correction)
   --bam             Specific hisat2 alignment bam file against reference genome
@@ -29,7 +29,8 @@ Options (defaults in parentheses):
 ```
 
 **NOTE**: 
-- For now, --circ and --tool options can only parse CIRI2 results.
+- For now, --circ and --tool options support results from `CIRI2` / `CIRCexplorer2` / `DCC` / `KNIFE` / `MapSplice` / `UROBORUS` / `circRNA_finder` / `find_circ`
+- For tools like `DCC` and `circRNA_finder`, please manually remove duplicated circRNAs with same junction postion but have opposite strands.
 - Gene expression values are needed for normalization, do not use `--no-gene` if you need to run DE analysis afterwards. 
 
 ## Example config
@@ -67,32 +68,50 @@ hisat_index | prefix of HISAT2 index for reference genome
 
 For quantification of user-provided circRNAs, a list of junction sites in bed format is required, for example:
 
-```
+```text
 chr1    10000   10099   chr1:10000|10099    .   +
 chr1    31000   31200   chr1:31000|31200    .   -
 ```
 
 ## Example Usage
 
-Test data set can be retrived from [test_data.tar.gz](https://github.com/Kevinzjy/CIRIquant/releases/download/v0.2.0/test_data.tar.gz), you can replace the path of required software in
- the `chr1.yml` with your own version
+### Recommended: Predict circRNAs using CIRI2 (packaged in CIRIquant)
 
-```
-tar zxvf test_data.tar.gz
-cd test_data/quant
+```bash
 CIRIquant -t 4 \
           -1 ./test_1.fq.gz \
           -2 ./test_2.fq.gz \
           --config ./chr1.yml \
-          --no-gene \
           -o ./test \
           -p test
 ```
 
-The output file `test.gtf` should be located under `test_data/quant/test`  
+### Quantify circRNAs using provided BED format input
 
-The demo dataset should take approximately 5 minutes on a personal computer. It has been tested on 
-my PC with Intel i7-8700 processor and 16G of memory, running Ubuntu 18.04 LTS.
+```
+CIRIquant -t 4 \
+          -1 ./test_1.fq.gz \
+          -2 ./test_2.fq.gz \
+          --config ./chr1.yml \
+          -o ./test \
+          -p test \
+          --bed your_circRNAs.bed
+```
+
+### Quantify circRNAs using results from other tools
+
+For example, if you have `find_circ` results of predicted circRNAs.
+
+```
+CIRIquant -t 4 \
+          -1 ./test_1.fq.gz \
+          -2 ./test_2.fq.gz \
+          --config ./chr1.yml \
+          -o ./test \
+          -p test \
+          --circ find_circ_results.txt \
+          --tool find_circ
+```
 
 ## Output format
 

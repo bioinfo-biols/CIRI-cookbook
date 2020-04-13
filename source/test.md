@@ -1,21 +1,31 @@
 # Test data
 
-A testing dataset can be downloaded from [Github](https://github.com/Kevinzjy/CIRIquant/releases/download/v0.1.0/test_data.tar.gz)
+## Download test dataset
 
-Folder `quant` contain the test dataset for circRNA quantification
-
-## 1. Generate hisat2 and bwa index
+Test dataset can be downloaded from [Github](https://github.com/Kevinzjy/CIRIquant/releases/download/v0.2.0/test_data.tar.gz).
 
 ```bash
+wget https://github.com/Kevinzjy/CIRIquant/releases/download/v0.2.0/test_data.tar.gz
+tar zxvf test_data.tar.gz
+```
+
+## circRNA quantification
+
+Folder `quant` contain the test dataset for circRNA quantification.
+
+### 1. Generate hisat2 and bwa index
+
+```bash
+cd ./test_data/DE
 bwa index -a bwtsw -p chr1.fa chr1.fa
 hisat2-build ./chr1.fa ./chr1.fa
 ```
 
-## 2. Edit the configuration in chr1.yml
+### 2. Customize the configuration
 
-Change the path of bwa/hisat2/stringtie/samtools to your own path
+Replace the path of `bwa`/`hisat2`/`stringtie`/`samtools` in `chr1.yml` with your own version.
 
-## 3. Run test dataset
+### 3. Run test dataset
 
 Test data set can be retrived under `test_data/quant` folder, you can replace the path of required software in the `chr1.yml` with your own version
 
@@ -28,6 +38,9 @@ CIRIquant -t 4 \
           -o ./test \
           -p test
 ```
+
+The demo dataset should take approximately 5 minutes on a personal computer. It has been tested on 
+my PC with Intel i7-8700 processor and 16G of memory, running Ubuntu 18.04 LTS.
 
 The structure of output directory `./test` should be like this:
 
@@ -59,14 +72,14 @@ test
 └── test.log
 ```
 
-You can check the output in `./test/test.gtf` and compare it to `test.gtf` provided in test_data
+Then, you can check the main output in `./test/test.gtf`.
 
 ## Differential expression analysis
 
 Folder `DE` contain the test dataset for differential expression analysis
 
 ```bash
-cd test_data/DE
+cd ./test_data/DE
 
 # Test for DE-score and DS-score calculation
 CIRI_DE -n ctrl.gtf \

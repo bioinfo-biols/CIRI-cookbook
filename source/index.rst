@@ -8,18 +8,11 @@ Welcome to CIRIquant-cookbook's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: documentation
 
    home
    installation
-   test
    quantification
    correction
    de
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   test
