@@ -64,7 +64,7 @@ hisat2 | the path of `hisat2`
 stringtie | the path of `stringite`
 samtools | the path of `samtools`, samtools version below 1.3.1 is not supported
 fasta | reference genome fasta, a fai index by `samtools faidx` is also needed under the same directory
-gtf | annotation file of reference genome
+gtf | annotation file of reference genome in GTF/GFF3 format
 bwa_index | prefix of BWA index for reference genome
 hisat_index | prefix of HISAT2 index for reference genome
 
