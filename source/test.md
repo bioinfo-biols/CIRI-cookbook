@@ -84,10 +84,10 @@ cd ./test_data/DE
 # Test for DE-score and DS-score calculation
 CIRI_DE -n ctrl.gtf \
         -c case.gtf \
-        -o CIRI_DE.csv
+        -o CIRI_DE.tsv
 
 # Test for RNase R correction
 CIRI_DE -n ctrl_corrected.gtf \
         -c case_corrected.gtf \
-        -o CIRI_DE_corrected.csv
+        -o CIRI_DE_corrected.tsv
 ```
