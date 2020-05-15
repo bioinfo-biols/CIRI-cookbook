@@ -19,7 +19,7 @@ Options (defaults in parentheses):
   -t                numer of threads (default: 4)
 
 Example usage:
-  CIRI_DE -n control.gtf -c case.gtf -o CIRI_DE.csv
+  CIRI_DE -n control.gtf -c case.gtf -o CIRI_DE.tsv
 ```
 
 The output format `CIRI_DE` is in the format below:
@@ -124,7 +124,7 @@ Example:
   CIRI_DE_replicate --lib  library_info.csv \
             --bsj  circRNA_bsj.csv \
             --gene gene_count_matrix.csv \
-            --out  circRNA_de.csv
+            --out  circRNA_de.tsv
 ```
 
 Please be noted that the output results is **unfiltered**, 
