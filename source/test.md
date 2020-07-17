@@ -16,7 +16,7 @@ Folder `quant` contain the test dataset for circRNA quantification.
 ### 1. Generate hisat2 and bwa index
 
 ```bash
-cd ./test_data/DE
+cd ./test_data/quant
 bwa index -a bwtsw -p chr1.fa chr1.fa
 hisat2-build ./chr1.fa ./chr1.fa
 ```
