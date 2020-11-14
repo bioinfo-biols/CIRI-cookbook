@@ -6,28 +6,28 @@
 Usage:
   CIRIquant [options] --config <config> -1 <m1> -2 <m2>
 
-  <config>          Config file
-  <m1>              Input mate1 reads (for paired-end data)
-  <m2>              Input mate2 reads (for paired-end data)
+  <config>            Config file
+  <m1>                Input mate1 reads (for paired-end data)
+  <m2>                Input mate2 reads (for paired-end data)
 
 
 Options (defaults in parentheses):
 
-  -v                Run in verbose mode
-  -o, --out          Output directory (default: current directory)
-  -e, --log         Specific log file (default: sample_prefix.log)
-  -p, --prefix      Output sample prefix (default: input sample name)
-  -t, --threads     Number of CPU threads to use (defualt: 4)
-  -a, --anchor      Minimum anchor length for junction alignment (default: 5)
-  -l, --library-type Library type, 0: unstranded, 1: read1 match the sense strand, 2: read1 match the antisense strand (default: 0)
+  -v                  Run in verbose mode
+  -o, --out           Output directory (default: current directory)
+  -e, --log           Specific log file (default: sample_prefix.log)
+  -p, --prefix        Output sample prefix (default: input sample name)
+  -t, --threads       Number of CPU threads to use (defualt: 4)
+  -a, --anchor        Minimum anchor length for junction alignment (default: 5)
+  -l, --library-type  Library type, 0: unstranded, 1: read1 match the sense strand, 2: read1 match the antisense strand (default: 0)
 
-  --bed             User provided Back-Spliced Junction Site in BED format
-  --circ            circRNA prediction results from other tools
-  --tool            Tool name, required when --circ is specified ([CIRI2/CIRCexplorer2/DCC/KNIFE/MapSplice/UROBORUS/circRNA_finder/find_circ])
+  --bed               User provided Back-Spliced Junction Site in BED format
+  --circ              circRNA prediction results from other tools
+  --tool              Tool name, required when --circ is specified ([CIRI2/CIRCexplorer2/DCC/KNIFE/MapSplice/UROBORUS/circRNA_finder/find_circ])
 
-  --RNaseR          CIRIquant output file of RNase R data (required for RNase R correction)
-  --bam             Specific hisat2 alignment bam file against reference genome
-  --no-gene         Skip StringTie estimation of gene abundance
+  --RNaseR            CIRIquant output file of RNase R data (required for RNase R correction)
+  --bam               Specific hisat2 alignment bam file against reference genome
+  --no-gene           Skip StringTie estimation of gene abundance
 ```
 
 **NOTE**: 
