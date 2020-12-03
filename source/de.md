@@ -64,6 +64,8 @@ The first three columns is required by default. For paired samples, you could al
 | 3 | group ("C" for control, "T" for treatment) |
 | 4 | subject (optional, only for paired samples) |
 
+**Note: If you are planning to use CIRI_DE for differential expression, then group name in column 3 must be either "C" or "T".**
+
 Then, run `prep_CIRIquant` to summarize the circRNA expression profile in all samples
 
 ```
