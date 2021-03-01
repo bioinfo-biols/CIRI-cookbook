@@ -68,7 +68,7 @@ gtf | annotation file of reference genome in GTF/GFF3 format
 bwa_index | prefix of BWA index for reference genome
 hisat_index | prefix of HISAT2 index for reference genome
 
-For quantification of user-provided circRNAs, a list of junction sites in bed format is required, for example:
+For quantification of user-provided circRNAs, a list of junction sites in bed format is required, the 4th column must be in "chrom:start|end" format. For example:
 
 ```text
 chr1    10000   10099   chr1:10000|10099    .   +
