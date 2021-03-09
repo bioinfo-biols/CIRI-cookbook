@@ -7,12 +7,12 @@ Welcome to CIRIquant-cookbook's documentation!
 ==============================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: documentation
+   :maxdepth: 3
+   :caption: CIRIquant
 
-   home
-   installation
-   quantification
-   correction
-   de
-   test
+   CIRIquant_0_home
+   CIRIquant_1_installation
+   CIRIquant_2_quantification
+   CIRIquant_3_correction
+   CIRIquant_4_de
+   CIRIquant_5_test.md

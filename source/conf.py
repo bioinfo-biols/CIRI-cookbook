@@ -24,7 +24,7 @@ source_suffix = ['.rst', '.md']
 # -- Project information -----------------------------------------------------
 
 project = 'CIRI-cookbook'
-copyright = '2020, Jinyang Zhang'
+copyright = '2021, Jinyang Zhang'
 author = 'Jinyang Zhang'
 
 # The full version, including alpha/beta/rc tags
