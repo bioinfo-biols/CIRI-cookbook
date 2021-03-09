@@ -23,12 +23,12 @@ source_suffix = ['.rst', '.md']
 
 # -- Project information -----------------------------------------------------
 
-project = 'CIRIquant-cookbook'
+project = 'CIRI-cookbook'
 copyright = '2020, Jinyang Zhang'
 author = 'Jinyang Zhang'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.2'
+release = '1.0.3'
 
 
 # -- General configuration ---------------------------------------------------
