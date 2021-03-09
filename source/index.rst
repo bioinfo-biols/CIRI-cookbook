@@ -19,4 +19,4 @@ Welcome to CIRI Toolkit's documentation!
 .. toctree::
    :caption: CIRI-long
 
-   CIRIlong_0_home
+   CIRI-long_0_home

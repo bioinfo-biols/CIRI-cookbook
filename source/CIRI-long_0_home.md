@@ -1,4 +1,4 @@
-# CIRI-long
+# Home
 
 ## CIRI-long: circular RNA identifier using long-read sequencing data
 
