@@ -7,6 +7,7 @@ Welcome to CIRI Toolkit's documentation!
 ==============================================
 
 .. toctree::
+   :maxdepth: 2
    :caption: CIRIquant
 
    CIRIquant_0_home
@@ -17,6 +18,9 @@ Welcome to CIRI Toolkit's documentation!
    CIRIquant_5_test.md
 
 .. toctree::
+   :maxdepth: 2
    :caption: CIRI-long
 
    CIRI-long_0_home
+   CIRI-long_1_installation
+   CIRI-long_2_usage

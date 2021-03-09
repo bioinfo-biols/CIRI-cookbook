@@ -6,12 +6,9 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/bioinfo-biols/CIRI-long)
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/bioinfo-biols/CIRI-long/blob/master/LICENSE)
 ![GitHub All Releases](https://img.shields.io/github/downloads/bioinfo-biols/CIRI-long/total)
+[![Documentation Status](https://readthedocs.org/projects/ciri-cookbook/badge/?version=latest)](https://ciri-cookbook.readthedocs.io/en/latest/?badge=latest)
 
 Circular RNA Identification for Long-Reads Nanopore Sequencing Data
-
-## Documentation
-
-Documentation is available online at https://github.com/bioinfo-biols/CIRI-long/wiki
 
 ## Author
 
@@ -26,3 +23,7 @@ Maintainer: Jinyang Zhang
 ## License
 
 The code is released under the MIT License. See the `LICENSE` file for more detail
+
+## Citing CIRI-long
+
+- Zhang, J.#, Hou, L., Zuo, Z., et al. Comprehensive profiling of circular RNAs with nanopore sequencing and CIRI-long. Nature Biotechnology, (2021) [doi:10.1038/s41587-021-00842-6](https://dx.doi.org/10.1038/s41587-021-00842-6)

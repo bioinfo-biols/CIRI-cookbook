@@ -1,8 +1,8 @@
 # Installation
 
-## Prerequisites
-
 **NOTES: Only python2 is supported**
+
+## Prerequisites
 
 Softwares:
 - bwa
