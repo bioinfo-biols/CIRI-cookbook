@@ -1,3 +1,3 @@
 # CIRI-cookbook
 
-Document for CIRI-series softwares
+Document for CIRI Toolkit
