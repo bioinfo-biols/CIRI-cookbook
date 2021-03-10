@@ -20,9 +20,9 @@ Maintainer: Yi Zheng
 
 ```
 Softwares:
-	JavaSE >= 1.6
+    JavaSE >= 1.6
     bwa
-	CIRI2
+    CIRI2
     CIRI-AS
     CIRI-Full
 ```
@@ -59,19 +59,19 @@ Usage: java -jar CIRI-vis.jar [Options]
 
 Options:
 
-	-i			The path of input file of CIRI-vis. (required)
-	-l			The path of library length file. (required for isoform quantification)
-	-r			The path of reference genome sequence in FASTA format. (required for output circRNA sequence)
-	-list		The list of choosen circRNA BSJ.(It is needed when more than one sample)
-	-d			The dictionary of output. Default currentdir/stdir
-	-o			The prefix of output. Default stout (optional)
-	-type		The format of figure. you can select pdf or svg or both. Default pdf (optional)
-	-max		The maximum expression (BSJ reads number) of circRNA that displayed by CIRI-vis. Default 999999999 (optional)
-	-min		The minimum expression (BSJ reads number) of circRNA that displayed by CIRI-vis. Default 5. Note: please only use one of -min, -exp, -rank (optional)
-	-rank		Only display the expression top X% of circRNA (optional)
-	-exp		Only display the top expression circRNA that contain X% of BSJ reads. (optional)
-	-iso		The maximum number of considering isoform, default 10. High value will make the quantification slower (optional)
-	-ran		Set random seed, default 0.(optional)
+  -i	    The path of input file of CIRI-vis. (required)
+  -l        The path of library length file. (required for isoform quantification)
+  -r        The path of reference genome sequence in FASTA format. (required for output circRNA sequence)
+  -list     The list of choosen circRNA BSJ.(It is needed when more than one sample)
+  -d        The dictionary of output. Default currentdir/stdir
+  -o        The prefix of output. Default stout (optional)
+  -type     The format of figure. you can select pdf or svg or both. Default pdf (optional)
+  -max      The maximum expression (BSJ reads number) of circRNA that displayed by CIRI-vis. Default 999999999 (optional)
+  -min      The minimum expression (BSJ reads number) of circRNA that displayed by CIRI-vis. Default 5. Note: please only use one of -min, -exp, -rank (optional)
+  -rank     Only display the expression top X% of circRNA (optional)
+  -exp      Only display the top expression circRNA that contain X% of BSJ reads. (optional)
+  -iso      The maximum number of considering isoform, default 10. High value will make the quantification slower (optional)
+  -ran      Set random seed, default 0.(optional)
 ```
 
 Examples:
@@ -102,41 +102,41 @@ Description of `prefix.list`:
 
 This file gives the detailed information of circRNA isoforms. Columns are separated by tabs:
 
-```text
-Image_ID:		The name of pdf file.
-Circle_ID:		ID of the BSJ position of circRNA isoform in the pattern of "chr:start|end";
-Chr: 			chromosome of a predicted circRNA isoform
-start:			start loci of a predicted circRNA isoform on the chromosome
-end:			end loci of a predicted circRNA isoform on the chromosome
-total_exp:		circular junction read (also called as back-spliced junction read) count of a predicted circRNA
-isoform_number: the serial number of isoform in circRNA
-isoform_exp:	the estimate BSJ read count of this predicted isoform.
-isoform_length: the minimum length of this predicted isoform.
-isoform_state:	whether this predicted isoform is fully reconstructed.
-strain: 		strain of circRNA (+/-)
-gene_id:		gene name that the circRNA located in
-isoform_cirexon: The cirexon position in this predicted isoform, "0-0" represent for the breakpoint during reconstruction. 
-```
+Columns|Description
+---|---
+Image_ID | The name of pdf file.
+Circle_ID | ID of the BSJ position of circRNA isoform in the pattern of "chr:start|end";
+Chr | chromosome of a predicted circRNA isoform
+start | start loci of a predicted circRNA isoform on the chromosome
+end | end loci of a predicted circRNA isoform on the chromosome
+total_exp | circular junction read (also called as back-spliced junction read) count of a predicted circRNA
+isoform_number | the serial number of isoform in circRNA
+isoform_exp | the estimate BSJ read count of this predicted isoform.
+isoform_length | the minimum length of this predicted isoform.
+isoform_state | whether this predicted isoform is fully reconstructed.
+strain | strain of circRNA (+/-)
+gene_id | gene name that the circRNA located in
+isoform_cirexon | The cirexon position in this predicted isoform, "0-0" represent for the breakpoint during reconstruction. 
 
 When more than one sample
 
-```text
-Image_ID:		The name of pdf file.
-Sample_name:	 Name of input sample (appear only when more than one sample)
-Circle_ID:		ID of the BSJ position of circRNA isoform in the pattern of "chr:start|end";	
-Chr: 			chromosome of a predicted circRNA isoform
-start:			start loci of a predicted circRNA isoform on the chromosome
-end:			end loci of a predicted circRNA isoform on the chromosome
-total_exp:		circular junction read (also called as back-spliced junction read) count of a predicted circRNA
-isoform_number: the serial number of isoform in circRNA
-isoform_exp:	the estimate BSJ read count of this predicted isoform.
-isoform_length: the minimum length of this predicted isoform.
-estimated_isoform_read_count:	The estimated total number of read that on this isoform (including BSJ and nonBSJ reads),
-isoform_state:	whether this predicted isoform is fully reconstructed.
-strain: 		strain of circRNA (+/-)
-gene_id:		gene name that the circRNA located in
-isoform_cirexon: The cirexon position in this predicted isoform, "0-0" represent for the breakpoint during reconstruction. 
-```
+Columns|Description
+---|---
+Image_ID | The name of pdf file.
+Sample_name | Name of input sample (appear only when more than one sample)
+Circle_ID | ID of the BSJ position of circRNA isoform in the pattern of "chr:start|end";	
+Chr | chromosome of a predicted circRNA isoform
+start | start loci of a predicted circRNA isoform on the chromosome
+end | end loci of a predicted circRNA isoform on the chromosome
+total_exp | circular junction read (also called as back-spliced junction read) count of a predicted circRNA
+isoform_number | the serial number of isoform in circRNA
+isoform_exp | the estimate BSJ read count of this predicted isoform.
+isoform_length | the minimum length of this predicted isoform.
+estimated_isoform_read_count | The estimated total number of read that on this isoform (including BSJ and nonBSJ reads),
+isoform_state | whether this predicted isoform is fully reconstructed.
+strain | strain of circRNA (+/-)
+gene_id | gene name that the circRNA located in
+isoform_cirexon | The cirexon position in this predicted isoform, "0-0" represent for the breakpoint during reconstruction. 
 
 Description of `prefix.fa`:
 
