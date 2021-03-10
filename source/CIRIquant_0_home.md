@@ -1,6 +1,6 @@
 # Home
 
-## Abount CIRIquant
+## CIRIquant: comprehensive toolkit for circRNA quantification and differential expression analysis
 
 [![Build Status](https://staging.travis-ci.com/bioinfo-biols/CIRIquant.svg?branch=master)](https://staging.travis-ci.com/bioinfo-biols/CIRIquant)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/bioinfo-biols/CIRIquant)
@@ -10,6 +10,8 @@
 [![Documentation Status](https://readthedocs.org/projects/ciri-cookbook/badge/?version=latest)](https://ciri-cookbook.readthedocs.io/en/latest/?badge=latest)
 
 CIRIquant is a comprehensive analysis pipeline for circRNA detection and quantification in RNA-Seq data
+
+![CIRIquant.png](https://github.com/bioinfo-biols/Zhaolab/blob/master/CIRIquant.png?raw=true)
 
 ## Author
 

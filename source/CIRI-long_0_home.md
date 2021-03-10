@@ -10,6 +10,8 @@
 
 Circular RNA Identification for Long-Reads Nanopore Sequencing Data
 
+![CIRI-long.png](https://github.com/bioinfo-biols/Zhaolab/blob/master/CIRI-long.png?raw=true)
+
 ## Author
 
 Authors: Jinyang Zhang(zhangjinyang@biols.ac.cn), Fangqing Zhao(zhfq@biols.ac.cn)
