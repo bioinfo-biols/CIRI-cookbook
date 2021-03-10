@@ -4,7 +4,7 @@ CIRI-vis is a tool for visualizing alignments of BSJ & RO merged reads and estim
 
 ![CIRI-vis.png](https://github.com/bioinfo-biols/Zhaolab/blob/master/CIRI-vis.png?raw=true)
 
-# Author
+## Author
 
 Authors: Yi Zheng(zhengyi@biols.ac.cn), Fangqing Zhao(zhfq@biols.ac.cn)
 
@@ -13,6 +13,8 @@ Maintainer: Yi Zheng
 ## Release Notes
 
 - Version 1.4
+
+# Installation
 
 ## Prerequisites
 
@@ -25,7 +27,7 @@ Softwares:
     CIRI-Full
 ```
 
-## Installation
+## Install CIRI-vis
 
 CIRI-vis is developed in JAVA, and it can be performed in any system which has Java SE Runtime Environment.
 
@@ -37,6 +39,8 @@ unzip CIRI-full_v2.0.zip
 ```
 
 you can find CIRI-vis.jar in the folder.
+
+# Commands and Arguments
 
 ## Running CIRI-vis
 
@@ -142,7 +146,7 @@ This FASTA format file will be generated if reference genome sequence is availab
 >(Image_name)#(BSJ) length=(isoform_length) (isoform_BSJ_read_count)/(circRNA_BSJ_read_count)
 ```
 
-## Example Usage
+# Example Usage
 
 Test data sets (FASTQ file, annotation file and reference sequence) are packaged with the CIRI-full software, which can be found in the CIRI-full_test/ folder. Temporary and final results are given in the CIRI-full/test_output/ folder.
 

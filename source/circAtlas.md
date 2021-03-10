@@ -1,4 +1,4 @@
-## circAtlas:
+## circAtlas v2.0
 
 [circAtlas v2.0: An integrated resource of circRNAs in vertebrates.](http://circatlas.biols.ac.cn)
 

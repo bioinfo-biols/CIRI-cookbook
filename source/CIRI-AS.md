@@ -4,7 +4,7 @@ CIRI-AS is a detection tool for circRNA internal components and alternative spli
 
 # Usage
 
-## How to run CIRI-AS:
+## How to run CIRI-AS
 
 - with annotation as input:
 
