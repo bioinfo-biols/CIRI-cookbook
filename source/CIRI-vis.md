@@ -4,7 +4,7 @@ CIRI-vis is a tool for visualizing alignments of BSJ & RO merged reads and estim
 
 ![CIRI-vis.png](https://github.com/bioinfo-biols/Zhaolab/blob/master/CIRI-vis.png?raw=true)
 
-## Author
+# Author
 
 Authors: Yi Zheng(zhengyi@biols.ac.cn), Fangqing Zhao(zhfq@biols.ac.cn)
 

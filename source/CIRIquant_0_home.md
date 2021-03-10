@@ -1,6 +1,6 @@
 # About
 
-## CIRIquant: comprehensive toolkit for circRNA quantification and differential expression analysis
+**CIRIquant**: comprehensive toolkit for circRNA quantification and differential expression analysis
 
 [![Build Status](https://staging.travis-ci.com/bioinfo-biols/CIRIquant.svg?branch=master)](https://staging.travis-ci.com/bioinfo-biols/CIRIquant)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/bioinfo-biols/CIRIquant)

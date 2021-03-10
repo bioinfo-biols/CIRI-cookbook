@@ -48,3 +48,9 @@ Welcome to CIRI Toolkit's documentation!
    CIRI-long_0_home
    CIRI-long_1_installation
    CIRI-long_2_usage
+
+.. toctree::
+   :maxdepth: 2
+   :caption: circAtlas
+
+   circAtlas.md
