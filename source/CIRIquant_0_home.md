@@ -1,4 +1,4 @@
-# Home
+# About
 
 ## CIRIquant: comprehensive toolkit for circRNA quantification and differential expression analysis
 

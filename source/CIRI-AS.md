@@ -1,4 +1,4 @@
-# CIRI-AS
+# About
 
 CIRI-AS is a detection tool for circRNA internal components and alternative splicing events.
 

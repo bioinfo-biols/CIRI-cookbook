@@ -7,25 +7,31 @@ Welcome to CIRI Toolkit's documentation!
 ==============================================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: CIRI2
 
    CIRI2.md
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: CIRI-AS
 
    CIRI-AS.md
 
 .. toctree::
-   :maxdepth: 3
-   :caption: CIRI-full & CIRI-vis
+   :maxdepth: 2
+   :caption: CIRI-full
 
    CIRI-full.md
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
+   :caption: CIRI-vis
+
+   CIRI-vis.md
+
+.. toctree::
+   :maxdepth: 2
    :caption: CIRIquant
 
    CIRIquant_0_home
@@ -36,7 +42,7 @@ Welcome to CIRI Toolkit's documentation!
    CIRIquant_5_test.md
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: CIRI-long
 
    CIRI-long_0_home

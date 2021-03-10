@@ -1,4 +1,4 @@
-# CIRI-full
+# About
 
 Manual of CIRI-full v2.0
 

@@ -1,4 +1,6 @@
-# CIRI2: Circular RNA identification based on multiple seed matching
+# About
+
+CIRI2: Circular RNA identification based on multiple seed matching
 
 CIRI (circRNA identifier) is a novel chiastic clipping signal based algorithm,which can unbiasedly and accurately detect circRNAs from transcriptome data by employing multiple filtration strategies.
 
