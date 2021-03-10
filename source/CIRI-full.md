@@ -2,8 +2,10 @@
 
 Manual of CIRI-full v2.0
 
-If you have any questions, please contact Yi Zheng @ Beijing Institutes of Life Science, Chinese Academy of Sciences.
-Email: zhengyi12@mails.ucas.ac.cn
+If you have any questions, please contact 
+
+- Yi Zheng @ Beijing Institutes of Life Science, Chinese Academy of Sciences.
+- Email: zhengyi12@mails.ucas.ac.cn
 
 CIRI-full is an accurate, high-throughput approach that uses both BSJ and reverse overlap (RO) features to reconstruct and quantify full-length circular RNAs from RNA-seq data sets. In CIRI-full, the BSJ feature is employed to detect cirexons and to determine the boundaries of circRNAs. The RO feature, deduced from the overlapped sequence of paired-end reads, is used to explore the detailed landscape within boundary sites. The alignments of both BSJ & RO merged reads will be visualized. The relative abundance of isoforms within one circRNA will be estimated according to the coverage and spliced events of BSJ & RO merged reads. 
 
