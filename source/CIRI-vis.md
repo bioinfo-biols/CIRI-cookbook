@@ -46,11 +46,11 @@ you can find CIRI-vis.jar in the folder.
 
 Input file requirements:
 
-IF you runned CIRI-full Pipeline in previous step, the input file will be named:XXX_merge_circRNA_detail.anno under CIRI-full_output folder 
+- IF you runned CIRI-full Pipeline in previous step, the input file will be named:XXX_merge_circRNA_detail.anno under CIRI-full_output folder 
 
-IF you only run CIRI-AS with '-d yes' parameter in previous step, the input file will be named XXX_jav.list under your CIRI-AS output folder 
+- IF you only run CIRI-AS with '-d yes' parameter in previous step, the input file will be named XXX_jav.list under your CIRI-AS output folder 
 
-Library length file is nessaracy for isoform expression estimation. library length file will be XXX_library_length.list under your CIRI-AS output folder
+- Library length file is nessaracy for isoform expression estimation. library length file will be XXX_library_length.list under your CIRI-AS output folder
 
 CIRI-vis.jar runs from a command line as follows:
 
