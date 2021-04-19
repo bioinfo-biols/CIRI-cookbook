@@ -51,6 +51,12 @@ Welcome to CIRI Toolkit's documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: CIRI-long Sequencing Protocol
+
+   CIRI-long_sequencing.md
+
+.. toctree::
+   :maxdepth: 2
    :caption: circAtlas
 
    circAtlas.md
