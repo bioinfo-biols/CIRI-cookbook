@@ -27,7 +27,7 @@ Use the setup.py for CIRIquant installation (clean install using `virutalenv` is
 ```bash
 # create and activate virtual env
 pip install virtualenv
-virtualenv venv
+virtualenv -p /path/to/your/python2/executable venv
 source ./venv/bin/activate
 
 # Install CIRIquant and its requirement automatically
