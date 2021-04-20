@@ -1,4 +1,4 @@
-# CIRI-long Nanopore Sequencing Library Preparation
+# CIRI-long Nanopore Library Preparation
 
 ## 1. Total RNA Extraction & Ribosomal RNA Depletion
 
