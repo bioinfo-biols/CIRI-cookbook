@@ -36,7 +36,7 @@ Polyadenylated RNA | 20 uL
 
 - Add 2.2uL of AMPure XP per 1.0 uL of sample.
 - Wash beads + RNA fragments twice with 75% Ethanol to remove contaminants.
-- Elute purified RNA. 
+- Elute purified RNA with 20uL H2O.
 
 ### 2.3 RNase R Treatment to effectively digest linear RNAs
 
@@ -63,7 +63,7 @@ Polyadenylated RNA | 20 uL
 
 - Add 2.2uL of AMPure XP per 1.0 uL of sample.
 - Wash beads + RNA fragments twice with 75% Ethanol to remove contaminants.
-- Elute purified RNA with 20uL H2O. 
+- Elute purified RNA with 5uL H2O. 
 
 ## 3. SMARTer Reverse Transcription
 
@@ -96,7 +96,7 @@ SMARTScribe Reverse Transcriptase (100 U/uL) | 1 uL
 
 ## 4. cDNA PCR Amplification
 
-To obtain sufficient cDNA products for sequencing, PCR amplification is performed using 2uL of cDNA with NEBNext LongAmp Taq DNA Polymerase and SMARTer primers under the following conditions:
+To obtain sufficient cDNA products for sequencing, PCR amplification is performed using **2uL** of cDNA with **NEBNext LongAmp Taq DNA Polymerase** and **SMARTer primers** under the following conditions:
 
 STEP | TEMP | TIME
 -|-|-
