@@ -1,4 +1,4 @@
-# Nanopore library preparation for CIRI-long method
+# CIRI-long Nanopore Sequencing Library Preparation
 
 ## 1. Total RNA Extraction & Ribosomal RNA Depletion
 
@@ -11,7 +11,7 @@ In our manuscript:
 
 Then, additional poly(A) tails are added to the linear transcripts to increase RNase R digestion efficiency.
 
-### 2.1 Add poly(A) tails to linear RNAs
+### 2.1 Add Poly(A) Tails To Linear RNAs
 
 E-PAP treatment is used to add poly(A) tails to the 3' end of linear RNAs, which can increase the RNase R digestion ability to RNAs with secondary structures.
 
@@ -24,7 +24,7 @@ NEB *E.coli* Poly(A) Polymerase (5 U/uL) | 1 uL
 
 - Ribosomal-depleted total RNA is incubated at 37ºC with 1uL of Poly(A) Polymerase for 30min.
 
-### 2.2 Purification after poly(A) treatment
+### 2.2 Purification After Poly(A) Treatment
 
 AMPure XP is used to remove contamination after poly(A) treatment.
 
@@ -38,7 +38,7 @@ Polyadenylated RNA | 20 uL
 - Wash beads + RNA fragments twice with 75% Ethanol to remove contaminants.
 - Elute purified RNA with 20uL H2O.
 
-### 2.3 RNase R Treatment to effectively digest linear RNAs
+### 2.3 RNase R Treatment To Effectively Digest Linear RNAs
 
 Polyadenylted RNA is treated using RNase R to remove linear RNAs.
 
@@ -105,7 +105,7 @@ Initial Denaturation | 95ºC | 30 s
 Final Extension | 65ºC | 2 min
 Hold | 4-10ºC
 
-## 5. Fragment Size selection
+## 5. Fragment Size Selection
 
 Afterward, AMPure XP is used for size selection of the cDNA fragments:
 
