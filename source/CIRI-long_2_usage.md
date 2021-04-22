@@ -29,10 +29,12 @@ optional arguments:
   -r REF, --ref REF     Reference genome FASTA file
   -p PREFIX, --prefix PREFIX
                         Output sample prefix, (default: CIRI-long)
-  -a GTF, --anno GTF    Genome reference gtf
+  -a GTF, --anno GTF    Genome reference gtf, (optional)
+  -c CIRC, --circ CIRC  Additional circRNA annotation in bed/gtf format,
+                        (optional)
   --canonical           Use canonical splice signal (GT/AG) only, default: True)
   -t INT, --threads INT
-                        Number of threads
+                        Number of threads, (default: use all cores)
   --debug               Run in debugging mode, (default: False)
 ```
 
@@ -95,10 +97,12 @@ optional arguments:
   -p PREFIX, --prefix PREFIX
                         Output sample prefix, (default: CIRI-long)
   -r REF, --ref REF     Reference genome FASTA file
-  -a GTF, --anno GTF    Genome reference gtf
+  -a GTF, --anno GTF    Genome reference gtf, (optional)
+  -c CIRC, --circ CIRC  Additional circRNA annotation in bed/gtf format,
+                        (optional)
   --canonical           Use canonical splice signal (GT/AG) only, default: True)
   -t INT, --threads INT
-                        Number of threads
+                        Number of threads, (default: use all cores)
   --debug               Run in debugging mode, (default: False)
 ```
 
@@ -199,4 +203,12 @@ SPLICE_SIGNAL = {
 }
 ```
 
+## Using additional circRNA annotations
 
+From version `v1.0.2`, CIRI-long call also provide additional circRNA annotations in BED/GTF format for BSJ correction with `--circ` option. CircRNA annotations can be downloaded from [circAtlas](http://circatlas.biols.ac.cn/) or other databases. The GTF-format output of CIRIquant is also supported.
+
+**NOTE: If using results from other tools/databases, please make sure the coordinate system is compatible with our CIRI-series tools**:
+
+> The coordinate system of circRNAs is different in most circRNA tools. For instance, if a circRNA is derived from chr1:1000-2000, it should be reported as chr1:1000-2000 in CIRI-series and some tools (DCC/KNIFE/Mapsplice), but reported as chr1:999-2000 in other tools (CIRCexplorer2/UROBORUS/circRNA_finder/find_circ).
+> 
+> Thus, if you want to use circRNAs identified from tools in the latter group, you need to add 1 extra base to the start coordinate of circRNAs (the position with smaller coordinate regardless of the strand information), then use the altered coordinates as input.
