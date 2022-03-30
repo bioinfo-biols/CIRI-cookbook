@@ -56,15 +56,22 @@ name: CIRI
 channels:
 - defaults
 - bioconda
+- conda-forge
 dependencies:
 - bioconda::bwa=0.7.17
 - bioconda::hisat2=2.2.0
 - bioconda::stringtie=2.1.1
 - bioconda::samtools>=1.10
+- bioconda::bioconductor-edger=3.28.0
+- bioconda::bioconductor-limma=3.42.0
+- conda-forge::r-statmod=1.4.35
+- conda-forge::r-base=3.6
+- conda-forge::r-optparse=1.6.6
 - python=2.7.15
 - pip=20.0.2
+- perl=5.26.2
 - pip:
-  - CIRIquant==1.1.2
+  - CIRIquant>=1.1.2
   - numexpr==2.6.9
   - numpy==1.16.4
   - pysam==0.15.2
