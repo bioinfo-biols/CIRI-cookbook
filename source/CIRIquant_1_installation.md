@@ -46,3 +46,52 @@ The package should take approximately 40 seconds to install on a normal computer
 ```
 pip install CIRIquant
 ```
+
+## Install CIRIquant using conda
+
+Save the following content to a file called environment.yml:
+
+```
+name: CIRI
+channels:
+- defaults
+- bioconda
+- conda-forge
+dependencies:
+- bioconda::bwa=0.7.17
+- bioconda::hisat2=2.2.0
+- bioconda::stringtie=2.1.1
+- bioconda::samtools>=1.10
+- bioconda::bioconductor-edger=3.28.0
+- bioconda::bioconductor-limma=3.42.0
+- conda-forge::r-statmod=1.4.35
+- conda-forge::r-base=3.6
+- conda-forge::r-optparse=1.6.6
+- python=2.7.15
+- pip=20.0.2
+- perl=5.26.2
+- pip:
+  - CIRIquant>=1.1.2
+  - numexpr==2.6.9
+  - numpy==1.16.4
+  - pysam==0.15.2
+  - PyYAML==5.4
+  - scikit-learn==0.20.3
+  - scipy==1.2.2
+  - argparse>=1.2.1
+```
+
+After you have saved the file just run: 
+```
+# this installs the dependencies specified in the yml file
+conda env create -f environment.yml
+# this activates the conda environment
+conda activate CIRI
+
+# this will return the path bwa, hisat2, stringtie or samtools are installed to
+# these paths need to be specified in the CIRI configuration file when running the tool
+which bwa
+which hisat2
+which stringtie
+which samtools
+```
