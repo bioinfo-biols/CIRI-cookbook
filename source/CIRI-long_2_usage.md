@@ -32,7 +32,6 @@ optional arguments:
   -a GTF, --anno GTF    Genome reference gtf, (optional)
   -c CIRC, --circ CIRC  Additional circRNA annotation in bed/gtf format,
                         (optional)
-  --canonical           Use canonical splice signal (GT/AG) only, default: True)
   -t INT, --threads INT
                         Number of threads, (default: use all cores)
   --debug               Run in debugging mode, (default: False)
@@ -83,6 +82,32 @@ test_call
 1 directory, 7 files
 ```
 
+### Using non-canonical splice signals
+
+If you would like to use other splice signals, please modify the dict `SPLICE_SIGNAL` in [align.py](https://github.com/bioinfo-biols/CIRI-long/blob/master/CIRI/align.py#L34) in format: {(5'SS, 3'SS): Priority}
+
+Default configuration:
+
+```Python
+SPLICE_SIGNAL = {
+    ('GT', 'AG'): 0,  # U2-type
+    ('GC', 'AG'): 1,  # U2-type
+    ('AT', 'AC'): 2,  # U12-type
+    ('GT', 'AC'): 2,  # U12-type
+    ('AT', 'AG'): 2,  # U12-type
+}
+```
+
+### Using additional circRNA annotations
+
+From version `v1.0.2`, CIRI-long call also provide additional circRNA annotations in BED/GTF format for BSJ correction with `--circ` option. CircRNA annotations can be downloaded from [circAtlas](http://circatlas.biols.ac.cn/) or other databases. The GTF-format output of CIRIquant is also supported.
+
+**NOTE: If using results from other tools/databases, please make sure the coordinate system is compatible with our CIRI-series tools**:
+
+> The coordinate system of circRNAs is different in most circRNA tools. For instance, if a circRNA is derived from chr1:1000-2000, it should be reported as chr1:1000-2000 in CIRI-series and some tools (DCC/KNIFE/Mapsplice), but reported as chr1:999-2000 in other tools (CIRCexplorer2/UROBORUS/circRNA_finder/find_circ).
+> 
+> Thus, if you want to use circRNAs identified from tools in the latter group, you need to add 1 extra base to the start coordinate of circRNAs (the position with smaller coordinate regardless of the strand information), then use the altered coordinates as input.
+
 ## Step2. isoform collapse
 
 ### Basic Options
@@ -100,7 +125,6 @@ optional arguments:
   -a GTF, --anno GTF    Genome reference gtf, (optional)
   -c CIRC, --circ CIRC  Additional circRNA annotation in bed/gtf format,
                         (optional)
-  --canonical           Use canonical splice signal (GT/AG) only, default: True)
   -t INT, --threads INT
                         Number of threads, (default: use all cores)
   --debug               Run in debugging mode, (default: False)
@@ -139,6 +163,7 @@ The output directory should have the following structure:
 ```
 test_collpase
 ├── test_collpase.expression
+├── test_collpase.isoforms
 ├── test_collpase.info
 ├── test_collpase.log
 ├── test_collpase.reads
@@ -185,30 +210,16 @@ The attributes containing several pre-defined keys and values:
 
 **Expression matrix**
 
-`test_collpase.expression` contains the summarized expression level of circRNAs in all samples in `tsv` format.
+- `test_collpase.expression` contains the summarized expression level of circRNAs in all samples in `tsv` format.
 
-## Using non-canonical splice signals
+- `test_collpase.isoforms` contains the summarized isoform usage index of assembled isoforms in all samples in `tsv` format.
 
-If you would like to use other splice signals, please modify the dict `SPLICE_SIGNAL` in [align.py](https://github.com/Kevinzjy/CIRI-long/blob/master/CIRI/align.py#L34) in format: {(5'SS, 3'SS): Priority}
+- `Isoform usage index = Isoform_reads / Sum of all isoforms from the same BSJ`
 
-Default configuration:
+## Step3. Output visualization
 
-```Python
-SPLICE_SIGNAL = {
-    ('GT', 'AG'): 0,  # U2-type
-    ('GC', 'AG'): 1,  # U2-type
-    ('AT', 'AC'): 2,  # U12-type
-    ('GT', 'AC'): 2,  # U12-type
-    ('AT', 'AG'): 2,  # U12-type
-}
+From version `v1.1.0`, CIRI-long included the 'misc/convert_bed.py', users can convert the GTF-formatted `circRNA.info` to bed format, and visualize using softwares like IGV / Jbrowse2
+
 ```
-
-## Using additional circRNA annotations
-
-From version `v1.0.2`, CIRI-long call also provide additional circRNA annotations in BED/GTF format for BSJ correction with `--circ` option. CircRNA annotations can be downloaded from [circAtlas](http://circatlas.biols.ac.cn/) or other databases. The GTF-format output of CIRIquant is also supported.
-
-**NOTE: If using results from other tools/databases, please make sure the coordinate system is compatible with our CIRI-series tools**:
-
-> The coordinate system of circRNAs is different in most circRNA tools. For instance, if a circRNA is derived from chr1:1000-2000, it should be reported as chr1:1000-2000 in CIRI-series and some tools (DCC/KNIFE/Mapsplice), but reported as chr1:999-2000 in other tools (CIRCexplorer2/UROBORUS/circRNA_finder/find_circ).
-> 
-> Thus, if you want to use circRNAs identified from tools in the latter group, you need to add 1 extra base to the start coordinate of circRNAs (the position with smaller coordinate regardless of the strand information), then use the altered coordinates as input.
+python3 misc/convert_bed.py collapse_out/sample.info sample_circ.bed
+```

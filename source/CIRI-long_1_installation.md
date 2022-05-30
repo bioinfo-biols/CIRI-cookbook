@@ -3,7 +3,7 @@
 ## Dependency
 
 - `gcc 4.8+` or `clang 3.4+` and `cmake 3.2+` is needed
-- **Only python3 is supported**
+- **Only python>=3.7 is supported**
 - CIRI-long requires pysam lib, which need executable binary and header of zlib, bzip2, xz, please refer to documentation of pysam for installation instructions
 - all python dependencies are listed in requirements.txt
 - `samtools` version `1.9` or higher
