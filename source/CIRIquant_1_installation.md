@@ -18,36 +18,25 @@ Python packages:
 - scipy
 - scikit-learn
 
-## Install CIRIquant from source code
+## Use the released version
 
-**Please use the latest released version from [GitHub](https://github.com/Kevinzjy/CIRIquant/releases) or [SourceForge](https://sourceforge.net/projects/ciri/files/CIRIquant/)**
+**Download the latest released version of CIRIquant from [GitHub](https://github.com/Kevinzjy/CIRIquant/releases)**
 
-Use the setup.py for CIRIquant installation (clean install using `virutalenv` is highly recommended).
+The released package is a packed conda environment including all dependencie
 
 ```bash
-# create and activate virtual env
-pip install virtualenv
-virtualenv -p /path/to/your/python2/executable venv
-source ./venv/bin/activate
-
-# Install CIRIquant and its requirement automatically
-tar zxvf CIRIquant.tar.gz
-cd CIRIquant
-python setup.py install
-
-# Manual installation of required pacakges is also supported
-pip install -r requirements.txt
+wget https://github.com/bioinfo-biols/CIRIquant/releases/download/v1.1.3/CIRIquant_v1.1.3.tar.gz
+tar zxvf CIRIquant_v1.1.3.tar.gz -C CIRIquant_env
 ```
 
-The package should take approximately 40 seconds to install on a normal computer.
+Activate CIRIquant environment and test
 
-## Install CIRIquant using pip
-
+```bash
+conda activate ./CIRIquant_env
+which CIRIquant
 ```
-pip install CIRIquant
-```
 
-## Install CIRIquant using conda
+## Install CIRIquant and dependencies using conda
 
 Save the following content to a file called environment.yml:
 
@@ -81,7 +70,7 @@ dependencies:
   - argparse>=1.2.1
 ```
 
-After you have saved the file just run: 
+After you have saved the file just run:
 ```
 # this installs the dependencies specified in the yml file
 conda env create -f environment.yml
@@ -95,3 +84,30 @@ which hisat2
 which stringtie
 which samtools
 ```
+
+## Install CIRIquant using pip
+
+```
+pip install CIRIquant
+```
+
+## Install CIRIquant from source code
+
+Use the setup.py for CIRIquant installation (clean install using `virutalenv` is highly recommended).
+
+```bash
+# create and activate virtual env
+pip install virtualenv
+virtualenv -p /path/to/your/python2/executable venv
+source ./venv/bin/activate
+
+# Install CIRIquant and its requirement automatically
+tar zxvf CIRIquant.tar.gz
+cd CIRIquant
+python setup.py install
+
+# Manual installation of required pacakges is also supported
+pip install -r requirements.txt
+```
+
+The package should take approximately 40 seconds to install on a normal computer.

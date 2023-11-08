@@ -114,20 +114,25 @@ for further analysis.
 For differential analysis using `CIRI_DE_replicate`, you need to install a R environment and `edgeR` package from Bioconductor.
 
 ```bash
-Usage:
-  CIRI_DE_replicate [options]
+usage: CIRIquant_DE_replicate [-h] --lib FILE --bsj FILE --gene FILE --out
+                              FILE --out2 FILE
 
-  --lib             library information by CIRIquant
-  --bsj             circRNA expression matrix
-  --gene            gene expression matrix
-  --out             output differential expression result
+optional arguments:
+  -h, --help   show this help message and exit
+  --lib FILE   library information
+  --bsj FILE   circRNA expression matrix
+  --gene FILE  gene expression matrix
+  --out FILE   output result of circRNA differential expression analysis
+  --out2 FILE  output result of gene differential expression analysis
 
 Example:
-  CIRI_DE_replicate --lib  library_info.csv \
-            --bsj  circRNA_bsj.csv \
-            --gene gene_count_matrix.csv \
-            --out  circRNA_de.tsv
+  CIRI_DE_replicate \
+          --lib  library_info.csv \
+          --bsj  circRNA_bsj.csv \
+          --gene gene_count_matrix.csv \
+          --out  circRNA_de.tsv \
+          --out2 gene_de.tsv
 ```
 
-Please be noted that the output results is **unfiltered**, 
+Please be noted that the output results is **unfiltered**,
 and you could apply a more stringent filter on expression values to get a more convincing result.
