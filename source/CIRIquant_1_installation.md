@@ -4,6 +4,7 @@
 
 ## Prerequisites
 
+```
 Softwares:
 - bwa
 - hisat2
@@ -17,16 +18,24 @@ Python packages:
 - numpy
 - scipy
 - scikit-learn
+```
 
-## Use the released version
+## Use the released version (Recommended)
 
 **Download the latest released version of CIRIquant from [GitHub](https://github.com/Kevinzjy/CIRIquant/releases)**
 
-The released package is a packed conda environment including all dependencie
+The released package is a packed conda environment including all dependencie, make sure you have installed anaconda in your environment
 
 ```bash
+# Download packed package
 wget https://github.com/bioinfo-biols/CIRIquant/releases/download/v1.1.3/CIRIquant_v1.1.3.tar.gz
+mkdir -p CIRIquant_env
 tar zxvf CIRIquant_v1.1.3.tar.gz -C CIRIquant_env
+
+# Configuration environments (required)
+conda activate ./CIRIquant_env
+cd CIRIquant_env
+make
 ```
 
 Activate CIRIquant environment and test
@@ -36,7 +45,7 @@ conda activate ./CIRIquant_env
 which CIRIquant
 ```
 
-## Install CIRIquant and dependencies using conda
+## Install CIRIquant and dependencies using conda (Not recommended)
 
 Save the following content to a file called environment.yml:
 
