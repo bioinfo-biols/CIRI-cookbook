@@ -41,7 +41,7 @@ make
 Activate CIRIquant environment and test
 
 ```bash
-conda activate ./CIRIquant_env
+conda activate /path/to/CIRIquant_env
 which CIRIquant
 ```
 

@@ -114,7 +114,7 @@ for further analysis.
 For differential analysis using `CIRI_DE_replicate`, you need to install a R environment and `edgeR` package from Bioconductor.
 
 ```bash
-usage: CIRIquant_DE_replicate [-h] --lib FILE --bsj FILE --gene FILE --out
+usage: CIRI_DE_replicate [-h] --lib FILE --bsj FILE --gene FILE --out
                               FILE --out2 FILE
 
 optional arguments:
